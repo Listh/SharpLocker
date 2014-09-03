@@ -109,8 +109,8 @@ namespace SharpLocker
             Random rnd = new Random();
             // PasswordHash: I guess could be anything.
             Keys.PasswordHash = DateTime.Now.ToString("MMddyyyy");
-            // SaltKey: Idk?
-            Keys.SaltKey = "S@LT&KEYS" + (rnd.Next(1, 1337) * rnd.Next(1, 1337)).ToString();
+            // SaltKey: Probably anything.
+            Keys.SaltKey = "$@|_t{" + Environment.MachineName + "}|<3Y{" + (rnd.Next(1, 1337)) + "}" + "|RandomValues{" + (rnd.Next(1, 1337) * rnd.Next(1, 1337)).ToString() + "}";
             // VIKey: 16 values, hexadecimal characters. Start with an @ sign. The alphabetical characters can be either upper or lower case.
             // Available characters: 22
             // ABCDEFabcdef1234567890
